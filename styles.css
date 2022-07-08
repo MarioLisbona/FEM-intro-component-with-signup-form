@@ -117,6 +117,7 @@ form button {
 }
 
 input, button {
+    outline: none;
     margin: 0;
     padding: 1em;
     width: 100%;
@@ -126,6 +127,10 @@ input, button {
 
 input {
     border: 1px solid var(--grayish-blue);
+}
+
+input:focus {
+    border: 1px solid var(--blue);
 }
 
 .terms {
