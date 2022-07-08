@@ -124,7 +124,7 @@ input, button {
     margin: 0;
     padding: 1em;
     width: 100%;
-    margin-bottom: 1em;
+    margin-bottom: 2em;
     border-radius: .3em;
 }
 
@@ -155,6 +155,36 @@ input:focus {
 .button-accent {
     color: var(--red);
     font-weight: 700;
+}
+
+.error-container {
+    font-size: .6rem;
+    color: var(--red);
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+}
+
+.error-icon {
+    position: absolute;
+    right: 2em;
+    top: -6.5em;
+}
+
+.error-msg {
+    position: absolute;
+    right: 0;
+    top: -2.5em;
+}
+
+/* .hidden {
+    display: none;
+} */
+
+.active {
+    display: block;
 }
 
 /* Frontend Mentor Footer */
