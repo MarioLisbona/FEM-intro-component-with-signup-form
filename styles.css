@@ -141,13 +141,13 @@ input {
     border: 1px solid var(--grayish-blue);
 }
 
-input:valid {
+/* input:valid {
     border-color: var(--grayish-blue);
 }
 
 input:invalid {
     border-color: red;
-}
+} */
 
 input:focus {
     border: 1px solid var(--blue);
@@ -184,9 +184,9 @@ input:focus {
     top: -2.5em;
 }
 
-/* .hidden {
+.hidden {
     display: none;
-} */
+}
 
 .active {
     display: block;
