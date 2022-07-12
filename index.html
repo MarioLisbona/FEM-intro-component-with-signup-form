@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles.css">
+  <script src="./script.js" defer></script>
   <title>Frontend Mentor | Intro Component with Sign Up Form</title>
 </head>
 <body>
@@ -22,27 +23,27 @@
       <div class="signup-container">
         <div class="pricing-container"><a href="#"><p><span class="pricing-accent">Try it free 7 days</span> then $20/mo. thereafter</p></a></div>
         <form class="form-container" action="#" autocomplete="off">
-          <input type="text" name="first-name" id="first-name" placeholder="First Name" minlength="10">
+          <input class="f-name" type="text" name="first-name" id="first-name" placeholder="First Name">
           <div class="error-container hidden">
             <div class="error-icon"><img src="./images/icon-error.svg" alt="Error Icon"></div>
             <div class="error-msg"><i>First Name cannont be empty</i></div>
           </div>
-          <input type="text" name="last-name" id="last-name" placeholder="Last Name" minlength="10">
+          <input class="l-name" type="text" name="last-name" id="last-name" placeholder="Last Name">
           <div class="error-container hidden">
             <div class="error-icon"><img src="./images/icon-error.svg" alt="Error Icon"></div>
             <div class="error-msg"><i>Last Name cannont be empty</i></div>
           </div>
-          <input type="email" name="email" id="email" placeholder="Email Address" minlength="10">
+          <input class="email" type="email" name="email" id="email" placeholder="Email Address" autocomplete="username">
           <div class="error-container hidden">
             <div class="error-icon"><img src="./images/icon-error.svg" alt="Error Icon"></div>
             <div class="error-msg"><i>Looks like this is not an email</i></div>
           </div>
-          <input type="password" name="password" id="password" placeholder="Password" minlength="10">
+          <input class="p-word" type="password" name="password" id="password" placeholder="Password" autocomplete="current-password">
           <div class="error-container hidden">
             <div class="error-icon"><img src="./images/icon-error.svg" alt="Error Icon"></div>
             <div class="error-msg"><i>Password cannont be empty</i></div>
           </div>
-          <button type="submit">claim your free trial</button>
+          <button class="submit" type="submit">claim your free trial</button>
           <p class="terms">By clicking the button, you are agreeing to our <a href="#"><span class="button-accent">Terms and Services</span></a></p>
         </form>
       </div>
