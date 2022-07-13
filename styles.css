@@ -43,7 +43,9 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* position: relative; */
+    /* position: relative;*/
+    /* Im not sure why this isnt needed to resposition the footer 15px from the bottom of the viewport. 
+    Normally i have needed to do this with similar projects */
 }
 
 .main-container {
@@ -53,7 +55,6 @@ body {
     justify-content: center;
     align-items: center;
     width: 80vw;
-    height: 80vh;
     max-width: 70em;
 }
 
@@ -143,14 +144,6 @@ input {
     border: 1px solid var(--grayish-blue);
 }
 
-/* input:valid {
-    border-color: var(--grayish-blue);
-}
-
-input:invalid {
-    border-color: red;
-} */
-
 input:focus {
     border: 1px solid var(--blue);
 }
@@ -237,6 +230,10 @@ input:focus {
 
     footer {
         display: none;
+    }
+
+    .terms {
+        text-align: center;
     }
     
 }
