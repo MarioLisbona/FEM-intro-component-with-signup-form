@@ -39,11 +39,11 @@ body {
     background-image: url(./images/bg-intro-desktop.png);
     background-color: var(--red);
     min-height: 100vh;
-    height:fit-content;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .main-container {
@@ -196,16 +196,12 @@ input:focus {
 
 @media (max-width: 800px) {
     .main-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        height: 100vh;
-        width: 90vw;
+        grid-template-columns: 1fr;
     }
 
     .pricing-container,
-    .form-container {
+    .form-container,
+    .info-container {
         width: 100%;
     }
 
@@ -223,6 +219,10 @@ input:focus {
 
     .info-container {
         padding: 0;
+    }
+
+    .info {
+        font-weight: 600;
     }
 
     .pricing-container,
