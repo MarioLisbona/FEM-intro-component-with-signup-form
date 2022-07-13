@@ -57,6 +57,7 @@ submit.addEventListener('click', function(event) {
                 errorContainer.classList.add('hidden');
                 input.style.border = inputValid;
             } else if (inputValue == '') {
+                input.style.border = inputInvalid;
                 errorContainer.classList.remove('hidden');
                 errorContainer.lastElementChild.textContent = 'First Name cannot be empty';
             } else {
@@ -79,6 +80,7 @@ submit.addEventListener('click', function(event) {
                 errorContainer.classList.add('hidden');
                 input.style.border = inputValid;
             } else if (inputValue == '') {
+                input.style.border = inputInvalid;
                 errorContainer.classList.remove('hidden');
                 errorContainer.lastElementChild.textContent = 'Last Name cannot be empty';
             } else {
@@ -101,6 +103,7 @@ submit.addEventListener('click', function(event) {
                 errorContainer.classList.add('hidden');
                 input.style.border = inputValid;
             } else if (inputValue == '') {
+                input.style.border = inputInvalid;
                 errorContainer.classList.remove('hidden');
                 errorContainer.lastElementChild.textContent = 'Email field cannot be empty';
             } else {
@@ -123,6 +126,7 @@ submit.addEventListener('click', function(event) {
                 errorContainer.classList.add('hidden');
                 input.style.border = inputValid;
             } else if (inputValue == '') {
+                input.style.border = inputInvalid;
                 errorContainer.classList.remove('hidden');
                 errorContainer.lastElementChild.textContent = 'Password field cannot be empty';
             } else {

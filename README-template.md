@@ -11,10 +11,8 @@ This is a solution to the [Intro component with sign up form challenge on Fronte
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 **Note: Delete this note and update the table of contents based on what sections you keep.**
 
@@ -104,15 +102,9 @@ If the value is invalid, i add the 1px red border with the inputInvalid variable
                 errorContainer.lastElementChild.textContent = 'First Name is invalid';
             }
 
+I then slightly change this code to be used for each differnt input field.
 
-
-### Continued development
-
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
-
-### Useful resources
+This was a great learning experience. I had never used JavaScript to do form validation before this project. Iv tried to document it as thourughly as possible so i have a reference when i need to do it next time.
 
 - [Example resource 1](https://stackoverflow.com/questions/46664142/js-regular-expression-for-first-name),
 (https://stackoverflow.com/questions/940577/javascript-regular-expression-email-validation),
@@ -120,18 +112,6 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 - [Example resource 2](https://www.w3schools.com/jsref/prop_element_nextelementsibling.asp) - i used this site to learn how to access the next sibling in the DOM. I used this to access the error message container from its previous sibling input field so i could remove the hidden class if the user input was not valid for that input field.
 
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
-
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- Frontend Mentor - [@MarioLisbona](https://www.frontendmentor.io/profile/MarioLisbona)
