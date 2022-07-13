@@ -203,6 +203,14 @@ input:focus {
         height: 100vh;
     }
 
+    .info-container h1 {
+        line-height: 150%;
+        margin-bottom: .5em;
+        font-weight: 700;
+        font-size: 1.5rem;
+        padding: 0 1em;
+    }
+
     .info-container {
         padding: 0;
     }
