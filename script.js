@@ -44,12 +44,14 @@ submit.addEventListener('click', function(event) {
 
         //if the current input field is the first name
         //check user input against regex to see if it is valid
-        //if it is valid ad a green border to the input field
+        //If valid add hidden class to remove error message from previously invalid user input
+        //Also add a green border to the input field
         //if it is invalid remove the hidden class from the next siblind to reveal the error message
         // and add a red border to the input
         if (input == firstName) {
 
             if (inputValue.match(fNameRegex)) {
+                errorContainer.classList.add('hidden');
                 input.style.border = inputValid;
             } else {
                 input.style.border = inputInvalid;
@@ -58,11 +60,13 @@ submit.addEventListener('click', function(event) {
 
         //if the current input field is the last name
         //check user input against regex to see if it is valid
-        //if it is valid ad a green border to the input field
+        //If valid add hidden class to remove error message from previously invalid user input
+        //Also add a green border to the input field
         //if it is invalid remove the hidden class from the next siblind to reveal the error message
         } else if (input == lastName) {
 
             if (inputValue.match(lNameRegex)) {
+                errorContainer.classList.add('hidden');
                 input.style.border = inputValid;
             } else {
                 input.style.border = inputInvalid;
@@ -71,11 +75,13 @@ submit.addEventListener('click', function(event) {
 
         //if the current input field is the email
         //check user input against regex to see if it is valid
-        //if it is valid ad a green border to the input field
+        //If valid add hidden class to remove error message from previously invalid user input
+        //Also add a green border to the input field
         //if it is invalid remove the hidden class from the next siblind to reveal the error message
         } else if (input == email) {
 
             if (inputValue.match(emailRegex)) {
+                errorContainer.classList.add('hidden');
                 input.style.border = inputValid;
             } else {
                 input.style.border = inputInvalid;
@@ -84,11 +90,13 @@ submit.addEventListener('click', function(event) {
 
         //if the current input field is the password
         //check user input against regex to see if it is valid
-        //if it is valid ad a green border to the input field
+        //If valid add hidden class to remove error message from previously invalid user input
+        //Also add a green border to the input field
         //if it is invalid remove the hidden class from the next siblind to reveal the error message
         } else if (input == password) {
 
             if (inputValue.match(passwordRegex)) {
+                errorContainer.classList.add('hidden');
                 input.style.border = inputValid;
             } else {
                 input.style.border = inputInvalid;
