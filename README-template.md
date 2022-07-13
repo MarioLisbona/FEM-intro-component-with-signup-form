@@ -94,8 +94,11 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 ### Useful resources
 
-- [Example resource 1](https://www.w3schools.com/cssref/pr_mix-blend-mode.asp) - I used this website to figure the right mix-blend-mode settings to use.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [Example resource 1](https://stackoverflow.com/questions/46664142/js-regular-expression-for-first-name),
+(https://stackoverflow.com/questions/940577/javascript-regular-expression-email-validation),
+(https://regexlib.com/REDetails.aspx?regexp_id=2799) - I used these 3 websites to find what regular expressions to use for the first name, last name, email and password input fields.
+
+- [Example resource 2](https://www.w3schools.com/jsref/prop_element_nextelementsibling.asp) - i used this site to learn how to access the next sibling in the DOM. I used this to access the error message container from its previous sibling input field so i could remove the hidden class if the user input was not valid for that input field.
 
 **Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 

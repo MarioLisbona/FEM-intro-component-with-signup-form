@@ -39,6 +39,7 @@ body {
     background-image: url(./images/bg-intro-desktop.png);
     background-color: var(--red);
     min-height: 100vh;
+    height:fit-content;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -190,6 +191,20 @@ input:focus {
 
 .active {
     display: block;
+}
+
+@media (max-width: 800px) {
+    .main-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .attribution {
+        top: 20px;
+    }
 }
 
 /* Frontend Mentor Footer */

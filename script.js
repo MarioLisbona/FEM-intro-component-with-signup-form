@@ -16,6 +16,9 @@ const passwordRegex = /^(?=(.*[a-zA-Z].*){2,})(?=.*\d.*)(?=.*\W.*)[a-zA-Z0-9\S]{
 
 // ceate diffreent message for empty field / invalid password?
 
+const inputValid = '1px solid green';
+const inputInvalid = '1px solid red';
+
 
 // Strong passwords with min 8 - max 15 character length, at least two letters (not case sensitive), 
 // one number, one special character (all, not just defined), space is not allowed.
@@ -43,11 +46,13 @@ submit.addEventListener('click', function(event) {
         //check user input against regex to see if it is valid
         //if it is valid ad a green border to the input field
         //if it is invalid remove the hidden class from the next siblind to reveal the error message
+        // and add a red border to the input
         if (input == firstName) {
 
             if (inputValue.match(fNameRegex)) {
-                input.style.border = '1px solid green';
+                input.style.border = inputValid;
             } else {
+                input.style.border = inputInvalid;
                 errorContainer.classList.remove('hidden');
             }
 
@@ -58,8 +63,9 @@ submit.addEventListener('click', function(event) {
         } else if (input == lastName) {
 
             if (inputValue.match(lNameRegex)) {
-                input.style.border = '1px solid green';
+                input.style.border = inputValid;
             } else {
+                input.style.border = inputInvalid;
                 errorContainer.classList.remove('hidden');
             }
 
@@ -70,8 +76,9 @@ submit.addEventListener('click', function(event) {
         } else if (input == email) {
 
             if (inputValue.match(emailRegex)) {
-                input.style.border = '1px solid green';
+                input.style.border = inputValid;
             } else {
+                input.style.border = inputInvalid;
                 errorContainer.classList.remove('hidden');
             }
 
@@ -82,8 +89,9 @@ submit.addEventListener('click', function(event) {
         } else if (input == password) {
 
             if (inputValue.match(passwordRegex)) {
-                input.style.border = '1px solid green';
+                input.style.border = inputValid;
             } else {
+                input.style.border = inputInvalid;
                 errorContainer.classList.remove('hidden');
             }
 
