@@ -9,18 +9,19 @@ const submit = document.querySelector('.submit');
 //create variables for input regex
 const nameRegex = /^(?=.{1,50}$)[a-z]+(?:['_.\s][a-z]+)*$/i;
 const emailRegex = /\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/;
-const passwordRegex = /^(?=(.*[a-zA-Z].*){2,})(?=.*\d.*)(?=.*\W.*)[a-zA-Z0-9\S]{8,15}$/;
+
+// Strong passwords with min 8 - max 15 character length, at least two letters (not case sensitive), 
+// one number, one special character (all, not just defined), space is not allowed.
 //test case correct: te$tPa55word
 //test case incorrect: test5324
+const passwordRegex = /^(?=(.*[a-zA-Z].*){2,})(?=.*\d.*)(?=.*\W.*)[a-zA-Z0-9\S]{8,15}$/;
 
-// ceate diffreent message for empty field / invalid password?
 
 const inputValid = '1px solid green';
 const inputInvalid = '1px solid red';
 
 
-// Strong passwords with min 8 - max 15 character length, at least two letters (not case sensitive), 
-// one number, one special character (all, not just defined), space is not allowed.
+
 
 
 //create an array consisting of each input element in the form
