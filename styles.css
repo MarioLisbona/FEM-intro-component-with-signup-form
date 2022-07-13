@@ -43,7 +43,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: relative;
+    /* position: relative; */
 }
 
 .main-container {
@@ -234,17 +234,26 @@ input:focus {
     .form-container {
         margin-bottom: 2em;
     }
+
+    footer {
+        display: none;
+    }
     
 }
 
 /* Frontend Mentor Footer */
-.attribution {
-    font-size: 11px;
-    text-align: center;
+
+footer {
     position: absolute;
     left: 0;
     right: 0;
     bottom: 15px;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+
 }
 .attribution a { 
     color: var(--blue);
