@@ -97,6 +97,7 @@ submit.addEventListener('click', function(event) {
         //if it is invalid remove the hidden class from the next siblind to reveal the error message
 
         //Added error messages for whether the input field is empty or invalid
+        //if the entered email is invalid, change the email input to red text.
 
         } else if (input == email) {
 
