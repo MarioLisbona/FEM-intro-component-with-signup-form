@@ -48,6 +48,11 @@ Users should be able to:
 
 ## My process
 
+I created a 2 column grid to layout the information and the signup form.
+I then created the signup form in the second column and used flexbox to layout the pricing information and form containers. I used flex box to align the pricing container information and the user inputs in the form.
+
+I placed the footer at the bottom of the page using ```position: absolute``` and ```bottom: 15px``` Normally i would put ```position: relative``` in the body, however this time i didnt need to use it and i cant figure out why. Normally using ```position: relative``` in the body would allow the position of the footer to stay at the bottom of the page for mobile but this time it wouldnt work at all. I tried everything and couldnt figure it out, so i added a ```display: none``` for mobile.
+
 ### Built with
 
 - Semantic HTML5 markup
@@ -58,27 +63,48 @@ Users should be able to:
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+I did some research of regex for the validation for the input fields.
 
-To see how you can add code snippets, see below:
+For the JavaScript form validation i created all the variables to access the input fields and then created variables to hold the regex for name, email and password fields. I shared the name regex across the first name and last name input fields.
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
+I then created an array that would contain those input fields.
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
+The event listener on the submit button has a callback which is used with preventDefault() to prevent the form being submitted untill all fields are valid.
 
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+    submit.addEventListener('click', function(event) {
+
+    //prevents form being submitted if any fields are not valid
+    event.preventDefault();
+
+I have then used the ```forEach``` method to access each input field with the callback ```input``` variable.
+
+    userInput.forEach(function (input)
+
+I assign the user input to a variable to check against the regex and then create a variable that will be assigned to the sibling element that comes after the current element that input is represnting. This is so we can access and the error message container that comes after each input.
+
+I use the following code to check which input the function is calling and then use if else statements to first compare the user input to that fields regex validation variable.
+
+If the input field is valid, then i add the hidden class. This is to reset the field to valid if it was previously invalid. Then a 1px green border is added with the inputValid variable.
+
+If the value is empty, i add the 1px red border with the inputInvalid variable and a message saying the field is empty.
+
+If the value is invalid, i add the 1px red border with the inputInvalid variable and a message saying the field is invalid.
+
+    if (input == firstName) {
+
+            if (inputValue.match(nameRegex)) {
+                errorContainer.classList.add('hidden');
+                input.style.border = inputValid;
+            } else if (inputValue == '') {
+                errorContainer.classList.remove('hidden');
+                errorContainer.lastElementChild.textContent = 'First Name cannot be empty';
+            } else {
+                input.style.border = inputInvalid;
+                errorContainer.classList.remove('hidden');
+                errorContainer.lastElementChild.textContent = 'First Name is invalid';
+            }
+
+
 
 ### Continued development
 
