@@ -32,15 +32,13 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![Desktop Initial State](./screenshots/Desktop%20Initial%20State.png)
+![Desktop Empty First Name input field](./screenshots/Desktop%20Empty%20First%20Name%20input%20field.png)
+![Desktop Invalid First Name input field](./screenshots/Desktop%20Invalid%20First%20Name%20input%20field.png)
+![Desktop Empty Email input field](./screenshots/Desktop%20Empty%20Email%20input%20field.png)
+![Desktop Invalid Email input field](./screenshots/Desktop%20Invalid%20Email%20input%20field.png)
+![Mobile Empty Email input field](./screenshots/Mobile%20Empty%20Email%20input%20field.png)
+![Mobile Invalid Email input field](./screenshots/Mobile%20Invalid%20Email%20input%20field.png)
 
 ### Links
 
