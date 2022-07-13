@@ -33,6 +33,7 @@ Users should be able to:
 ### Screenshot
 
 ![Desktop Initial State](./screenshots/Desktop%20Initial%20State.png)
+![Desktop Input Hover State.png](./screenshots/Desktop%20Input%20Hover%20State.png)
 ![Desktop Empty First Name input field](./screenshots/Desktop%20Empty%20First%20Name%20input%20field.png)
 ![Desktop Invalid First Name input field](./screenshots/Desktop%20Invalid%20First%20Name%20input%20field.png)
 ![Desktop Empty Email input field](./screenshots/Desktop%20Empty%20Email%20input%20field.png)
@@ -42,8 +43,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Add solution URL here](https://github.com/MarioLisbona/FEM-intro-component-with-signup-form)
+- Live Site URL: [Add live site URL here](https://mariolisbona.github.io/FEM-intro-component-with-signup-form/)
 
 ## My process
 
@@ -53,12 +54,7 @@ Users should be able to:
 - CSS custom properties
 - Flexbox
 - CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- JavaScript
 
 ### What I learned
 
