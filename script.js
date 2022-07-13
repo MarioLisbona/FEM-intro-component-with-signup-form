@@ -109,6 +109,7 @@ submit.addEventListener('click', function(event) {
                 errorContainer.lastElementChild.textContent = 'Email field cannot be empty';
             } else {
                 input.style.border = inputInvalid;
+                input.style.color = 'var(--red)';
                 errorContainer.classList.remove('hidden');
                 errorContainer.lastElementChild.textContent = 'Looks like this is not an email';
             }
