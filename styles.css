@@ -228,6 +228,9 @@ input:focus {
         margin-bottom: 2em;
     }
 
+    /* Iv removed the footer from the mobile version because i could not manage to place is at the bottom of the content
+    Iv normally done this with position: absolute on the footer and position: relative on the body...but for this project
+    the footer will only stay at the bottom of the initial viewport load window*/
     footer {
         display: none;
     }
