@@ -7,8 +7,7 @@ const errorMsg = document.querySelector('.error-container');
 const submit = document.querySelector('.submit');
 
 //create variables for input regex
-const fNameRegex = /^(?=.{1,50}$)[a-z]+(?:['_.\s][a-z]+)*$/i;
-const lNameRegex = /^(?=.{1,50}$)[a-z]+(?:['_.\s][a-z]+)*$/i;
+const nameRegex = /^(?=.{1,50}$)[a-z]+(?:['_.\s][a-z]+)*$/i;
 const emailRegex = /\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/;
 const passwordRegex = /^(?=(.*[a-zA-Z].*){2,})(?=.*\d.*)(?=.*\W.*)[a-zA-Z0-9\S]{8,15}$/;
 //test case correct: te$tPa55word
@@ -48,9 +47,11 @@ submit.addEventListener('click', function(event) {
         //Also add a green border to the input field
         //if it is invalid remove the hidden class from the next siblind to reveal the error message
         // and add a red border to the input
+
+
         if (input == firstName) {
 
-            if (inputValue.match(fNameRegex)) {
+            if (inputValue.match(nameRegex)) {
                 errorContainer.classList.add('hidden');
                 input.style.border = inputValid;
             } else {
@@ -65,7 +66,7 @@ submit.addEventListener('click', function(event) {
         //if it is invalid remove the hidden class from the next siblind to reveal the error message
         } else if (input == lastName) {
 
-            if (inputValue.match(lNameRegex)) {
+            if (inputValue.match(nameRegex)) {
                 errorContainer.classList.add('hidden');
                 input.style.border = inputValid;
             } else {
