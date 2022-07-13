@@ -48,15 +48,21 @@ submit.addEventListener('click', function(event) {
         //if it is invalid remove the hidden class from the next siblind to reveal the error message
         // and add a red border to the input
 
+        //Added error messages for whether the input field is empty or invalid
+
 
         if (input == firstName) {
 
             if (inputValue.match(nameRegex)) {
                 errorContainer.classList.add('hidden');
                 input.style.border = inputValid;
+            } else if (inputValue == '') {
+                errorContainer.classList.remove('hidden');
+                errorContainer.lastElementChild.textContent = 'First Name cannot be empty';
             } else {
                 input.style.border = inputInvalid;
                 errorContainer.classList.remove('hidden');
+                errorContainer.lastElementChild.textContent = 'First Name is invalid';
             }
 
         //if the current input field is the last name
@@ -64,14 +70,21 @@ submit.addEventListener('click', function(event) {
         //If valid add hidden class to remove error message from previously invalid user input
         //Also add a green border to the input field
         //if it is invalid remove the hidden class from the next siblind to reveal the error message
+
+        //Added error messages for whether the input field is empty or invalid
+
         } else if (input == lastName) {
 
             if (inputValue.match(nameRegex)) {
                 errorContainer.classList.add('hidden');
                 input.style.border = inputValid;
+            } else if (inputValue == '') {
+                errorContainer.classList.remove('hidden');
+                errorContainer.lastElementChild.textContent = 'Last Name cannot be empty';
             } else {
                 input.style.border = inputInvalid;
                 errorContainer.classList.remove('hidden');
+                errorContainer.lastElementChild.textContent = 'Last Name is invalid';
             }
 
         //if the current input field is the email
@@ -79,14 +92,21 @@ submit.addEventListener('click', function(event) {
         //If valid add hidden class to remove error message from previously invalid user input
         //Also add a green border to the input field
         //if it is invalid remove the hidden class from the next siblind to reveal the error message
+
+        //Added error messages for whether the input field is empty or invalid
+
         } else if (input == email) {
 
             if (inputValue.match(emailRegex)) {
                 errorContainer.classList.add('hidden');
                 input.style.border = inputValid;
+            } else if (inputValue == '') {
+                errorContainer.classList.remove('hidden');
+                errorContainer.lastElementChild.textContent = 'Email field cannot be empty';
             } else {
                 input.style.border = inputInvalid;
                 errorContainer.classList.remove('hidden');
+                errorContainer.lastElementChild.textContent = 'Looks like this is not an email';
             }
 
         //if the current input field is the password
@@ -94,14 +114,21 @@ submit.addEventListener('click', function(event) {
         //If valid add hidden class to remove error message from previously invalid user input
         //Also add a green border to the input field
         //if it is invalid remove the hidden class from the next siblind to reveal the error message
+
+        //Added error messages for whether the input field is empty or invalid
+
         } else if (input == password) {
 
             if (inputValue.match(passwordRegex)) {
                 errorContainer.classList.add('hidden');
                 input.style.border = inputValid;
+            } else if (inputValue == '') {
+                errorContainer.classList.remove('hidden');
+                errorContainer.lastElementChild.textContent = 'Password field cannot be empty';
             } else {
                 input.style.border = inputInvalid;
                 errorContainer.classList.remove('hidden');
+                errorContainer.lastElementChild.textContent = 'Password is invalid';
             }
 
         }
