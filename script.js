@@ -95,6 +95,7 @@ submit.addEventListener('click', function(event) {
         //If valid add hidden class to remove error message from previously invalid user input
         //Also add a green border to the input field
         //if it is invalid remove the hidden class from the next siblind to reveal the error message
+        //set the user input to black to reset a previous red invalid email text
 
         //Added error messages for whether the input field is empty or invalid
         //if the entered email is invalid, change the email input to red text.
