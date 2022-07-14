@@ -104,6 +104,7 @@ submit.addEventListener('click', function(event) {
             if (inputValue.match(emailRegex)) {
                 errorContainer.classList.add('hidden');
                 input.style.border = inputValid;
+                input.style.color = 'black';
             } else if (inputValue == '') {
                 input.style.border = inputInvalid;
                 errorContainer.classList.remove('hidden');
