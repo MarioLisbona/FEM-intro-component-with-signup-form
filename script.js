@@ -21,9 +21,6 @@ const inputValid = '1px solid green';
 const inputInvalid = '1px solid red';
 
 
-
-
-
 //create an array consisting of each input element in the form
 const userInput = [firstName, lastName, email, password];
 
@@ -40,107 +37,40 @@ submit.addEventListener('click', function(event) {
         //create a variable that will find the next sibling of the current element
         //this will be the div that contains the error message
         var errorContainer = input.nextElementSibling;
-        
-
-        //if the current input field is the first name
-        //check user input against regex to see if it is valid
-        //If valid add hidden class to remove error message from previously invalid user input
-        //Also add a green border to the input field
-        //if it is invalid remove the hidden class from the next siblind to reveal the error message
-        // and add a red border to the input
-
-        //Added error messages for whether the input field is empty or invalid
-
 
         if (input == firstName) {
-
-            if (inputValue.match(nameRegex)) {
-                errorContainer.classList.add('hidden');
-                input.style.border = inputValid;
-            } else if (inputValue == '') {
-                input.style.border = inputInvalid;
-                errorContainer.classList.remove('hidden');
-                errorContainer.lastElementChild.textContent = 'First Name cannot be empty';
-            } else {
-                input.style.border = inputInvalid;
-                errorContainer.classList.remove('hidden');
-                errorContainer.lastElementChild.textContent = 'First Name is invalid';
-            }
-
-        //if the current input field is the last name
-        //check user input against regex to see if it is valid
-        //If valid add hidden class to remove error message from previously invalid user input
-        //Also add a green border to the input field
-        //if it is invalid remove the hidden class from the next siblind to reveal the error message
-
-        //Added error messages for whether the input field is empty or invalid
-
+            checkInput (input, inputValue, nameRegex, 'First Name');
         } else if (input == lastName) {
-
-            if (inputValue.match(nameRegex)) {
-                errorContainer.classList.add('hidden');
-                input.style.border = inputValid;
-            } else if (inputValue == '') {
-                input.style.border = inputInvalid;
-                errorContainer.classList.remove('hidden');
-                errorContainer.lastElementChild.textContent = 'Last Name cannot be empty';
-            } else {
-                input.style.border = inputInvalid;
-                errorContainer.classList.remove('hidden');
-                errorContainer.lastElementChild.textContent = 'Last Name is invalid';
-            }
-
-        //if the current input field is the email
-        //check user input against regex to see if it is valid
-        //If valid add hidden class to remove error message from previously invalid user input
-        //Also add a green border to the input field
-        //if it is invalid remove the hidden class from the next siblind to reveal the error message
-        //set the user input to black to reset a previous red invalid email text
-
-        //Added error messages for whether the input field is empty or invalid
-        //if the entered email is invalid, change the email input to red text.
-
+            checkInput (input, inputValue, nameRegex, 'Last Name');
         } else if (input == email) {
-
-            if (inputValue.match(emailRegex)) {
-                errorContainer.classList.add('hidden');
-                input.style.border = inputValid;
-                input.style.color = 'black';
-            } else if (inputValue == '') {
-                input.style.border = inputInvalid;
-                errorContainer.classList.remove('hidden');
-                errorContainer.lastElementChild.textContent = 'Email field cannot be empty';
-            } else {
-                input.style.border = inputInvalid;
-                input.style.color = 'var(--red)';
-                errorContainer.classList.remove('hidden');
-                errorContainer.lastElementChild.textContent = 'Looks like this is not an email';
-            }
-
-        //if the current input field is the password
-        //check user input against regex to see if it is valid
-        //If valid add hidden class to remove error message from previously invalid user input
-        //Also add a green border to the input field
-        //if it is invalid remove the hidden class from the next siblind to reveal the error message
-
-        //Added error messages for whether the input field is empty or invalid
-
+            checkInput (input, inputValue, emailRegex, 'Email');
         } else if (input == password) {
-
-            if (inputValue.match(passwordRegex)) {
-                errorContainer.classList.add('hidden');
-                input.style.border = inputValid;
-            } else if (inputValue == '') {
-                input.style.border = inputInvalid;
-                errorContainer.classList.remove('hidden');
-                errorContainer.lastElementChild.textContent = 'Password field cannot be empty';
-            } else {
-                input.style.border = inputInvalid;
-                errorContainer.classList.remove('hidden');
-                errorContainer.lastElementChild.textContent = 'Password is invalid';
-            }
-
+            checkInput (input, inputValue, passwordRegex, 'Password');
         }
     });
 });
 
+//if the current input field is the last name
+//check user input against regex to see if it is valid
+//If valid add hidden class to remove error message from previously invalid user input
+//Also add a green border to the input field
+//if it is invalid remove the hidden class from the next siblind to reveal the error message
+
+//Added error messages for whether the input field is empty or invalid
+function checkInput (input, userInput, regex, type) {
+    var errorContainer = input.nextElementSibling;
+
+    if (userInput.match(regex)) {
+        console.log(userInput);
+        errorContainer.classList.add('hidden');
+        input.style.border = inputValid;
+    } else if (userInput == '') {
+        input.style.border = inputInvalid;
+        errorContainer.classList.remove('hidden');
+        errorContainer.lastElementChild.textContent = `${type} field cannot be empty`;
+    } else {
+        input.style.border = inputInvalid;
+        errorContainer.classList.remove('hidden');
+        errorContainer.lastElementChild.textContent = `${type} is invalid`;
+    }
+};
