@@ -50,13 +50,14 @@ submit.addEventListener('click', function(event) {
     });
 });
 
-//if the current input field is the last name
-//check user input against regex to see if it is valid
+
+
+//check user input against its relevant regex to see if it is valid
 //If valid add hidden class to remove error message from previously invalid user input
 //Also add a green border to the input field
 //if it is invalid remove the hidden class from the next siblind to reveal the error message
-
 //Added error messages for whether the input field is empty or invalid
+
 function checkInput (input, userInput, regex, type) {
     var errorContainer = input.nextElementSibling;
 
