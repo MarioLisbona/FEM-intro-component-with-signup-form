@@ -106,6 +106,10 @@ I then slightly change this code to be used for each differnt input field.
 
 This was a great learning experience. I had never used JavaScript to do form validation before this project. Iv tried to document it as thourughly as possible so i have a reference when i need to do it next time.
 
+Edit - I create a function ```checkInput(input, regex)``` that will take in two variables and the above logic so that its not repeated for times for each input
+
+
+
 - [Example resource 1](https://stackoverflow.com/questions/46664142/js-regular-expression-for-first-name),
 (https://stackoverflow.com/questions/940577/javascript-regular-expression-email-validation),
 (https://regexlib.com/REDetails.aspx?regexp_id=2799) - I used these 3 websites to find what regular expressions to use for the first name, last name, email and password input fields.
