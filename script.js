@@ -3,7 +3,6 @@ const firstName = document.querySelector('.f-name');
 const lastName = document.querySelector('.l-name');
 const email = document.querySelector('.email');
 const password = document.querySelector('.p-word');
-// const errorMsg = document.querySelector('.error-container');
 const submit = document.querySelector('.submit');
 
 //create variables for input regex
@@ -32,11 +31,6 @@ submit.addEventListener('click', function(event) {
 
     //callback function on each element in userInput array (each input of the DOM form)
     userInput.forEach(function (input) {
-        //create variable to hold the data entered into the input
-        // var inputValue = input.value;
-        //create a variable that will find the next sibling of the current element
-        //this will be the div that contains the error message
-        // var errorContainer = input.nextElementSibling;
 
         if (input == firstName) {
             checkInput (input, nameRegex);
@@ -51,17 +45,18 @@ submit.addEventListener('click', function(event) {
 });
 
 
-
-//check user input against its relevant regex to see if it is valid
-//If valid add hidden class to remove error message from previously invalid user input
-//Also add a green border to the input field
-//if it is invalid remove the hidden class from the next siblind to reveal the error message
-//Added error messages for whether the input field is empty or invalid
-
 function checkInput (input, regex) {
+    //create variable to hold the data entered into the input
+    //create a variable that will find the next sibling of the current element
+    //this will be the div that contains the error message
     var errorContainer = input.nextElementSibling;
     var userInput = input.value
-    console.log(input);
+
+    //check user input against its relevant regex to see if it is valid
+    //If valid add hidden class to remove error message from previously invalid user input
+    //Also add a green border to the input field
+    //if it is invalid remove the hidden class from the next siblind to reveal the error message
+    //Added error messages for whether the input field is empty or invalid
 
     if (userInput.match(regex)) {
         errorContainer.classList.add('hidden');
