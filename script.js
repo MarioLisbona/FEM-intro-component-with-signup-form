@@ -3,7 +3,7 @@ const firstName = document.querySelector('.f-name');
 const lastName = document.querySelector('.l-name');
 const email = document.querySelector('.email');
 const password = document.querySelector('.p-word');
-const errorMsg = document.querySelector('.error-container');
+// const errorMsg = document.querySelector('.error-container');
 const submit = document.querySelector('.submit');
 
 //create variables for input regex
@@ -33,19 +33,19 @@ submit.addEventListener('click', function(event) {
     //callback function on each element in userInput array (each input of the DOM form)
     userInput.forEach(function (input) {
         //create variable to hold the data entered into the input
-        var inputValue = input.value;
+        // var inputValue = input.value;
         //create a variable that will find the next sibling of the current element
         //this will be the div that contains the error message
-        var errorContainer = input.nextElementSibling;
+        // var errorContainer = input.nextElementSibling;
 
         if (input == firstName) {
-            checkInput (input, inputValue, nameRegex, 'First Name');
+            checkInput (input, nameRegex);
         } else if (input == lastName) {
-            checkInput (input, inputValue, nameRegex, 'Last Name');
+            checkInput (input, nameRegex);
         } else if (input == email) {
-            checkInput (input, inputValue, emailRegex, 'Email');
+            checkInput (input, emailRegex);
         } else if (input == password) {
-            checkInput (input, inputValue, passwordRegex, 'Password');
+            checkInput (input, passwordRegex);
         }
     });
 });
@@ -58,20 +58,22 @@ submit.addEventListener('click', function(event) {
 //if it is invalid remove the hidden class from the next siblind to reveal the error message
 //Added error messages for whether the input field is empty or invalid
 
-function checkInput (input, userInput, regex, type) {
+function checkInput (input, regex) {
     var errorContainer = input.nextElementSibling;
+    var userInput = input.value
+    console.log(input);
 
     if (userInput.match(regex)) {
-        console.log(userInput);
         errorContainer.classList.add('hidden');
         input.style.border = inputValid;
     } else if (userInput == '') {
         input.style.border = inputInvalid;
         errorContainer.classList.remove('hidden');
-        errorContainer.lastElementChild.textContent = `${type} field cannot be empty`;
+        // errorContainer.lastElementChild.textContent = `${type} field cannot be empty`;
+        errorContainer.lastElementChild.textContent = `${input.name} cannot be empty`;
     } else {
         input.style.border = inputInvalid;
         errorContainer.classList.remove('hidden');
-        errorContainer.lastElementChild.textContent = `${type} is invalid`;
+        errorContainer.lastElementChild.textContent = `${input.name} is invalid`;
     }
 };
