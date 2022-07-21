@@ -23,8 +23,10 @@ const inputInvalid = '1px solid red';
 //create an array consisting of each input element in the form
 const userInput = [firstName, lastName, email, password];
 
+//callback function on each element in userInput array (each input of the DOM form)
     userInput.forEach(function (input) {
 
+//Everytime a character is entered into any of the input fields...check its validity against its required regex
         input.oninput = () => {
 
             if (input == firstName) {
@@ -38,7 +40,7 @@ const userInput = [firstName, lastName, email, password];
             }
         }
     });
-    
+
 function checkInput (input, regex) {
     //create variable to hold the data entered into the input
     //create a variable that will find the next sibling of the current element
