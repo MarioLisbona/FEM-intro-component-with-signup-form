@@ -23,28 +23,22 @@ const inputInvalid = '1px solid red';
 //create an array consisting of each input element in the form
 const userInput = [firstName, lastName, email, password];
 
-//event listener on submit button - callback function on click
-submit.addEventListener('click', function(event) {
-
-    //prevents form being submitted if any fields are not valid
-    event.preventDefault();
-
-    //callback function on each element in userInput array (each input of the DOM form)
     userInput.forEach(function (input) {
 
-        if (input == firstName) {
-            checkInput (input, nameRegex);
-        } else if (input == lastName) {
-            checkInput (input, nameRegex);
-        } else if (input == email) {
-            checkInput (input, emailRegex);
-        } else if (input == password) {
-            checkInput (input, passwordRegex);
+        input.oninput = () => {
+
+            if (input == firstName) {
+                checkInput (input, nameRegex);
+            } else if (input == lastName) {
+                checkInput (input, nameRegex);
+            } else if (input == email) {
+                checkInput (input, emailRegex);
+            } else if (input == password) {
+                checkInput (input, passwordRegex);
+            }
         }
     });
-});
-
-
+    
 function checkInput (input, regex) {
     //create variable to hold the data entered into the input
     //create a variable that will find the next sibling of the current element
