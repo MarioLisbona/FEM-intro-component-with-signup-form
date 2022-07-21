@@ -41,8 +41,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/MarioLisbona/FEM-intro-component-with-signup-form)
-- Live Site URL: [Add live site URL here](https://mariolisbona.github.io/FEM-intro-component-with-signup-form/)
+- Solution URL: [solution](https://github.com/MarioLisbona/FEM-intro-component-with-signup-form)
+- Live Site URL: [live site URL](https://mariolisbona.github.io/FEM-intro-component-with-signup-form/)
 
 ## My process
 
@@ -107,6 +107,8 @@ I then slightly change this code to be used for each differnt input field.
 This was a great learning experience. I had never used JavaScript to do form validation before this project. Iv tried to document it as thourughly as possible so i have a reference when i need to do it next time.
 
 Edit - I create a function ```checkInput(input, regex)``` that will take in two variables and the above logic so that its not repeated for times for each input
+
+Edit #2 - I have tweaked the code so that the checkInput validation function is called everytime a character is entered into any of the input fields rather than the validation being checked after the submit button is clicked. I used the ```oninput``` attribute appended to the input variable wchich is returned from the forEach() callback function.
 
 
 
