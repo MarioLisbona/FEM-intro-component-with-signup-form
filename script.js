@@ -60,7 +60,6 @@ function checkInput (input, regex) {
     } else if (userInput == '') {
         input.style.border = inputInvalid;
         errorContainer.classList.remove('hidden');
-        // errorContainer.lastElementChild.textContent = `${type} field cannot be empty`;
         errorContainer.lastElementChild.textContent = `${input.name} cannot be empty`;
     } else {
         input.style.border = inputInvalid;
